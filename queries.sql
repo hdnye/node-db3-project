@@ -27,3 +27,10 @@
     FROM "Order" as o
     JOIN "Customer" as c ON c."id" = o."CustomerId"
     JOIN "Employee" as e ON e."id" = o."EmployeeId";
+
+-- Display Scheme Name & Instructions 
+
+    SELECT s."scheme_name", st."instructions"
+    FROM "schemes" AS s
+    JOIN steps AS st ON s."id" = st."scheme_id"
+    WHERE s."id" = 3;
